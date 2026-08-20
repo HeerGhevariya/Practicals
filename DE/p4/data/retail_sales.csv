@@ -1,0 +1,4 @@
+Transaction_ID,Store_Code,Store_Name,Product,Quantity,Unit_Price,Sale_Date,Customer_ID
+1001,A01, Mumbai Store ,Laptop,5,199.50,2024-01-01,C001
+1002,B04, Delhi Store ,Mouse,10,399.25,2024-01-02,C002
+1003,A01, Mumbai Store ,Keyboard,3,100.00,2024-01-03,C003

@@ -1,0 +1,201 @@
+transaction_id,timestamp,customer.customer_id,customer.name,customer.location.city,customer.location.country,purchase.item,purchase.category,purchase.amount,purchase.quantity,payment.method,payment.status
+TXN0001,2026-05-16T05:16:38,428,Kristina Henry,Ginaside,United Arab Emirates,learn,Home,1357.3,5,Debit Card,Failed
+TXN0002,2026-03-16T04:06:00,387,Sean Wyatt,Jessicaborough,Nicaragua,opportunity,Clothing,1583.09,1,Debit Card,Success
+TXN0003,2026-05-01T13:03:03,51,Christopher Adkins,East Scotthaven,Congo,accept,Home,471.97,1,Debit Card,Failed
+TXN0004,2026-06-04T16:22:09,497,Thomas Moon,New Joshuaview,Norway,measure,Footwear,68.96,3,Cash,Failed
+TXN0005,2026-06-26T12:04:02,117,Michael King,New Madelinefort,New Caledonia,project,Footwear,1110.55,4,Cash,Success
+TXN0006,2026-03-10T16:53:56,349,John Golden DDS,North Mikeberg,Romania,simply,Accessories,1324.74,1,Debit Card,Success
+TXN0007,2026-04-18T18:17:02,366,Bonnie Barnes,North Scottton,Germany,bill,Electronics,173.26,2,Cash,Success
+TXN0008,2026-05-23T05:45:31,379,Mrs. Lisa Smith,Rachaelburgh,United Kingdom,peace,Home,640.19,1,UPI,Success
+TXN0009,2026-04-14T13:13:37,483,Teresa Powell,North Jameshaven,Cameroon,shoulder,Footwear,895.02,3,UPI,Success
+TXN0010,2026-01-02T06:03:12,45,Jeremy Hill,Lake William,China,prove,Clothing,867.65,5,Cash,Success
+TXN0011,2026-06-29T19:31:22,14,Justin Wilson,Carrollland,Mongolia,wonder,Electronics,714.29,1,Debit Card,Failed
+TXN0012,2026-01-05T01:17:44,7,Thomas White,East Lonnietown,Seychelles,condition,Footwear,833.48,1,Credit Card,Success
+TXN0013,2026-03-16T05:03:04,351,James Miller,West Mary,Norway,yes,Home,347.31,3,Debit Card,Success
+TXN0014,2026-05-03T13:03:18,253,Nancy Collins,Mccarthyburgh,Fiji,challenge,Clothing,135.9,4,Debit Card,Failed
+TXN0015,2026-06-20T17:21:12,154,Russell Nelson,East Tiffany,Eritrea,save,Home,1567.51,3,Debit Card,Success
+TXN0016,2026-03-08T04:56:19,370,John Lane,Kelseyhaven,Korea,themselves,Home,1191.67,2,Cash,Success
+TXN0017,2026-04-23T02:46:35,70,Ruben Cruz,Lake Ryan,Oman,talk,Footwear,23.47,4,Debit Card,Failed
+TXN0018,2026-07-01T15:10:11,412,Michael Gordon,Christopherborough,Eritrea,discover,Footwear,886.04,4,Credit Card,Success
+TXN0019,2026-05-25T13:55:36,165,Thomas Holmes,South Donald,Namibia,future,Accessories,1895.09,2,Cash,Success
+TXN0020,2026-01-04T01:37:03,91,Mary Valenzuela,Jacquelinestad,Trinidad and Tobago,wear,Home,1937.76,3,Cash,Success
+TXN0021,2026-03-14T07:08:37,167,John Rogers,East Robinport,Central African Republic,manage,Home,567.8,4,Debit Card,Success
+TXN0022,2026-04-09T02:10:02,478,Jessica Jensen,Simonfort,Syrian Arab Republic,either,Accessories,407.6,5,Credit Card,Success
+TXN0023,2026-07-16T21:13:00,488,Lindsay Olson,Evansbury,Serbia,worry,Home,1886.52,2,Cash,Success
+TXN0024,2026-04-27T17:38:03,426,Jeffery Adams,Watkinsburgh,Malaysia,compare,Electronics,1639.74,4,Cash,Success
+TXN0025,2026-05-10T09:09:22,325,Traci Bender,New Karen,Bulgaria,record,Footwear,491.62,2,Cash,Failed
+TXN0026,2026-06-28T20:59:19,38,Amy Davis,Port Michael,Indonesia,company,Home,1981.49,4,Cash,Failed
+TXN0027,2026-03-20T23:05:53,279,Charles Andrade,Kyleburgh,Dominica,toward,Electronics,1583.53,3,UPI,Success
+TXN0028,2026-07-02T20:10:49,394,Nathaniel Moore,Adamburgh,Guatemala,black,Clothing,1318.63,3,Credit Card,Success
+TXN0029,2026-02-07T05:09:08,289,Jennifer Lewis,Barnettmouth,Romania,eight,Home,1933.95,3,Cash,Success
+TXN0030,2026-06-14T21:29:18,6,Fernando Mcconnell,Mejiaport,Svalbard & Jan Mayen Islands,represent,Electronics,524.89,5,Credit Card,Failed
+TXN0031,2026-05-24T08:33:53,192,Kimberly Reed,East Nicoleburgh,Seychelles,easy,Home,931.5,5,Credit Card,Success
+TXN0032,2026-03-15T00:00:45,13,Jonathan Smith,Melendezbury,Burundi,money,Home,218.05,4,UPI,Success
+TXN0033,2026-05-01T19:35:17,426,Eric Davis,Valdezchester,Canada,feel,Clothing,703.17,3,Cash,Success
+TXN0034,2026-02-11T08:00:16,267,Roberto Johnson,Whitefurt,Pitcairn Islands,nation,Home,703.12,1,Cash,Failed
+TXN0035,2026-02-19T23:56:21,164,Bradley Parks,Lake Michelletown,Central African Republic,from,Electronics,607.53,1,UPI,Success
+TXN0036,2026-01-22T04:04:55,332,Janet Gibson,Valdezfurt,Jamaica,spend,Electronics,1357.51,2,Credit Card,Success
+TXN0037,2026-07-27T18:47:11,283,David Walters,Shawfort,Rwanda,government,Clothing,668.67,4,Cash,Success
+TXN0038,2026-02-01T01:44:20,409,Ashley White,Schmidtfurt,Trinidad and Tobago,represent,Home,1263.22,2,Cash,Failed
+TXN0039,2026-06-30T11:54:24,15,George Villa,Jamesmouth,Jordan,anything,Accessories,1767.36,4,Cash,Failed
+TXN0040,2026-05-12T01:22:17,3,Bryan Burns,Brendanstad,El Salvador,large,Clothing,419.51,1,UPI,Success
+TXN0041,2026-06-23T12:11:58,188,Pamela Johnson,Guystad,Israel,adult,Footwear,402.18,1,Debit Card,Failed
+TXN0042,2026-04-07T13:22:08,271,Mark Larson,Jessicaside,Saint Vincent and the Grenadines,individual,Footwear,1197.97,5,Cash,Success
+TXN0043,2026-05-15T03:14:00,179,Joseph Martinez,Lake Trevor,Uganda,face,Footwear,1692.58,5,Credit Card,Success
+TXN0044,2026-02-26T23:48:47,471,Melissa Sanchez,Williamsmouth,Holy See (Vatican City State),American,Accessories,1184.44,2,Debit Card,Success
+TXN0045,2026-04-28T06:42:47,123,Misty Burnett,South Williamland,Guadeloupe,within,Footwear,242.73,3,Credit Card,Failed
+TXN0046,2026-06-18T07:54:34,215,Alex Clements,Jenniferland,Taiwan,while,Accessories,284.36,4,Cash,Success
+TXN0047,2026-04-05T15:56:13,250,Rebecca Duncan,Christinaside,Timor-Leste,student,Accessories,1389.93,2,Credit Card,Failed
+TXN0048,2026-03-14T02:58:30,148,Amber Berry,Port Selena,Falkland Islands (Malvinas),skin,Clothing,382.33,4,UPI,Success
+TXN0049,2026-03-22T10:39:02,488,Michael Jacobs,Lake Justin,Albania,investment,Electronics,974.37,2,Cash,Failed
+TXN0050,2026-03-29T07:31:07,210,Jason Anderson,Stevenmouth,Bhutan,do,Home,837.1,4,Cash,Success
+TXN0051,2026-05-08T16:11:27,43,Frederick Brown,Jessicamouth,Namibia,kitchen,Accessories,71.41,2,Debit Card,Success
+TXN0052,2026-02-28T22:40:45,141,Karen Grant,Matthewstad,Swaziland,light,Clothing,1079.84,2,Cash,Failed
+TXN0053,2026-01-31T12:41:04,282,Patrick Clark,Lake Peter,Iraq,alone,Accessories,235.29,1,Debit Card,Success
+TXN0054,2026-04-24T07:59:16,278,Kristina Reed,Lake Traci,Heard Island and McDonald Islands,fly,Electronics,1522.41,4,Credit Card,Failed
+TXN0055,2026-06-17T14:09:30,53,Jocelyn Mcdonald,New Brenda,Nigeria,he,Clothing,602.44,1,Cash,Success
+TXN0056,2026-07-28T18:43:38,179,Phillip Potter,Angelafort,Dominica,how,Electronics,883.75,1,Credit Card,Success
+TXN0057,2026-03-11T08:52:54,416,Lawrence Atkinson,South Jefferyville,Montserrat,figure,Accessories,1381.38,5,Cash,Success
+TXN0058,2026-06-12T09:43:12,316,Pamela Joyce,Piercestad,Sao Tome and Principe,director,Clothing,1571.85,2,UPI,Success
+TXN0059,2026-07-26T19:20:16,273,Diana Townsend,Lake Nicolemouth,Macao,north,Footwear,1197.75,2,Debit Card,Success
+TXN0060,2026-03-10T23:36:00,149,Scott Simpson,Mitchellmouth,Cayman Islands,window,Accessories,542.01,5,UPI,Success
+TXN0061,2026-06-12T08:58:24,493,Aaron Gallegos,Douglasville,Hungary,partner,Home,1838.35,3,Credit Card,Success
+TXN0062,2026-06-08T18:03:41,128,Jennifer Fields,East Chelsea,Macao,be,Clothing,1425.68,2,Cash,Failed
+TXN0063,2026-06-01T04:54:21,73,Erika Wright,Cohenstad,Angola,situation,Accessories,1268.48,4,Cash,Failed
+TXN0064,2026-03-10T01:05:05,39,Sharon Jefferson,South Miguel,Tunisia,education,Electronics,811.67,3,Debit Card,Failed
+TXN0065,2026-06-29T02:30:19,487,Micheal Gonzalez,West Calvin,Antarctica (the territory South of 60 deg S),design,Home,661.31,1,UPI,Failed
+TXN0066,2026-02-13T04:03:39,326,Michael Wallace,Port Gregory,Kyrgyz Republic,month,Footwear,1701.71,5,Cash,Success
+TXN0067,2026-01-13T13:16:05,496,Sara Wiggins,East Steven,Bangladesh,account,Home,1651.45,4,Debit Card,Success
+TXN0068,2026-04-11T23:38:53,425,Jennifer Meyer,Atkinsland,Slovenia,key,Footwear,682.13,5,Credit Card,Failed
+TXN0069,2026-06-04T17:19:36,404,Kimberly Baldwin,South Timothyton,French Guiana,task,Footwear,1789.37,1,UPI,Success
+TXN0070,2026-06-20T21:31:27,321,Molly Williams,Moranhaven,Norfolk Island,rate,Home,42.4,2,Cash,Failed
+TXN0071,2026-02-13T09:53:59,1,Caleb Thomas,Katherineshire,Sao Tome and Principe,strong,Home,412.61,2,Debit Card,Success
+TXN0072,2026-02-07T17:16:37,448,Holly Douglas,East Laura,Cote d'Ivoire,everything,Footwear,195.75,3,Debit Card,Success
+TXN0073,2026-06-22T16:38:38,191,Michael Ellis,Goodwinview,Guam,find,Clothing,113.06,3,Credit Card,Failed
+TXN0074,2026-04-23T00:21:59,336,Jerry Scott,Brookeberg,Cameroon,nearly,Electronics,1410.36,1,Credit Card,Failed
+TXN0075,2026-04-29T08:23:43,40,Spencer Elliott,Kristopherburgh,Montenegro,protect,Clothing,1191.42,5,Cash,Success
+TXN0076,2026-04-10T22:15:48,5,Jeremiah Phillips,East Catherine,Togo,if,Footwear,1636.05,4,Credit Card,Failed
+TXN0077,2026-07-17T12:25:00,37,Alyssa Lewis,Eddietown,Eritrea,himself,Clothing,772.31,1,UPI,Success
+TXN0078,2026-07-14T14:32:47,189,Whitney Sullivan,West Dawn,Namibia,tonight,Footwear,282.89,2,Credit Card,Success
+TXN0079,2026-07-07T23:11:32,272,James Grimes,Wonghaven,Liberia,continue,Accessories,26.86,2,Cash,Success
+TXN0080,2026-04-19T02:05:20,370,Alexis Arroyo,Jeffreyborough,Czech Republic,citizen,Clothing,1259.88,2,Cash,Failed
+TXN0081,2026-01-05T17:43:10,441,Monica Wilson,West Victor,Montenegro,while,Clothing,182.51,1,Credit Card,Success
+TXN0082,2026-06-04T18:12:26,302,Sarah Logan,Lake James,Papua New Guinea,alone,Home,709.56,4,Debit Card,Success
+TXN0083,2026-07-28T19:59:54,127,Tiffany Romero,Angelaside,Tanzania,site,Footwear,1292.79,2,Debit Card,Success
+TXN0084,2026-04-06T04:22:36,435,Tracy Brown,East Jonathan,Saint Vincent and the Grenadines,cover,Footwear,418.84,5,Credit Card,Failed
+TXN0085,2026-01-25T17:26:14,152,Mitchell Thompson,Andrealand,Samoa,customer,Electronics,1569.77,2,Cash,Failed
+TXN0086,2026-07-05T08:35:36,58,Brandi Turner,East John,Senegal,party,Clothing,1004.17,5,UPI,Success
+TXN0087,2026-02-15T04:59:10,185,Joshua Harrington,Kristyland,Congo,mean,Footwear,272.65,5,Cash,Success
+TXN0088,2026-06-16T21:36:46,280,John Garcia,New Tony,Montenegro,act,Clothing,1527.82,1,UPI,Success
+TXN0089,2026-06-27T04:35:58,8,Ashley Tanner,New Linda,Nicaragua,someone,Footwear,439.33,1,Cash,Success
+TXN0090,2026-04-27T08:49:18,322,Darlene Russell MD,West William,Malaysia,federal,Accessories,1536.55,4,Cash,Success
+TXN0091,2026-03-12T18:02:35,328,Joseph Peterson,Connieville,Saudi Arabia,young,Accessories,1079.93,2,Debit Card,Success
+TXN0092,2026-04-29T07:27:35,159,Mr. William Ruiz,East Cameron,Jersey,report,Electronics,1027.5,2,Credit Card,Success
+TXN0093,2026-03-24T19:19:16,201,Scott Peterson,East Kimberly,Serbia,each,Accessories,1272.25,1,Debit Card,Failed
+TXN0094,2026-03-23T16:03:46,374,Eric Miranda,Garciaport,Vanuatu,poor,Clothing,125.23,1,Cash,Success
+TXN0095,2026-03-03T00:34:57,233,Brittney Moore,Floydburgh,New Zealand,recognize,Accessories,1221.58,3,Credit Card,Success
+TXN0096,2026-04-13T01:59:24,7,Jose Wells,Chanview,Denmark,worker,Clothing,1405.98,2,Cash,Success
+TXN0097,2026-05-03T11:14:37,268,Scott Torres,West Matthew,Guinea,themselves,Accessories,1568.14,3,Credit Card,Success
+TXN0098,2026-05-18T07:54:08,65,Jeffery Long,Smithfurt,Azerbaijan,issue,Footwear,1468.54,1,UPI,Success
+TXN0099,2026-04-10T09:26:03,414,Brenda Bryant,Andrewborough,Cote d'Ivoire,recently,Home,551.24,1,Debit Card,Success
+TXN0100,2026-03-25T11:45:26,255,James Morris,Nguyenside,Saint Vincent and the Grenadines,decision,Home,1026.46,1,Cash,Success
+TXN0101,2026-07-02T11:31:19,189,Jessica Hill,East Ethanfort,Western Sahara,set,Clothing,517.68,1,UPI,Success
+TXN0102,2026-05-26T15:25:48,380,Theresa Harrington,Wattsfort,Egypt,far,Accessories,15.11,1,Credit Card,Success
+TXN0103,2026-02-22T03:37:27,242,Anthony Cooper,Samuelport,Bouvet Island (Bouvetoya),marriage,Footwear,772.13,2,Credit Card,Success
+TXN0104,2026-03-19T16:04:55,284,Angela Rowland,Hollowayberg,Namibia,firm,Home,456.79,2,Cash,Success
+TXN0105,2026-02-24T13:15:09,139,Jessica Murphy,Angelaport,Portugal,age,Electronics,1147.36,1,UPI,Success
+TXN0106,2026-06-23T03:32:00,115,Andrea Hartman,Susanstad,United Kingdom,spring,Accessories,1963.01,4,UPI,Failed
+TXN0107,2026-04-11T14:17:44,444,Cindy Morris,South Michael,Congo,research,Footwear,1549.32,3,Debit Card,Success
+TXN0108,2026-01-19T15:40:55,284,Paul Johnson,Lake Robertfurt,Sri Lanka,message,Home,25.86,2,Debit Card,Success
+TXN0109,2026-05-08T00:30:48,379,Amy Mayo,Allenchester,Antigua and Barbuda,mother,Accessories,492.74,3,Cash,Success
+TXN0110,2026-02-13T15:02:14,376,Katherine Andrews,Lake Charlesland,Moldova,statement,Accessories,1523.36,2,Credit Card,Success
+TXN0111,2026-06-17T08:42:52,478,Rebecca Mathis,New Sandraborough,Sao Tome and Principe,baby,Home,57.58,5,Debit Card,Success
+TXN0112,2026-05-12T23:15:22,487,Julie Preston,Lake Mark,Cocos (Keeling) Islands,raise,Footwear,12.91,4,Debit Card,Success
+TXN0113,2026-01-03T11:13:23,106,Richard Stevenson,Prestonfurt,Morocco,finally,Accessories,1966.4,4,Cash,Success
+TXN0114,2026-05-07T20:18:44,498,Jean Smith,Ronaldview,Togo,dog,Clothing,1426.19,1,UPI,Success
+TXN0115,2026-02-27T14:06:18,460,Martha Gonzalez,Patriciashire,Cape Verde,current,Accessories,831.98,3,Cash,Success
+TXN0116,2026-05-08T04:09:29,298,Christopher Johnson,Port Davidstad,Zimbabwe,authority,Electronics,1015.8,4,UPI,Success
+TXN0117,2026-03-26T08:47:04,223,Tanya Barrett,West Frank,Faroe Islands,early,Clothing,481.18,3,Debit Card,Failed
+TXN0118,2026-03-23T00:08:49,359,Alyssa Rich,Martinezfurt,Anguilla,life,Footwear,642.93,3,Credit Card,Success
+TXN0119,2026-02-06T01:26:29,484,Jeremy Ross,Port Oscar,Suriname,capital,Clothing,280.86,5,UPI,Success
+TXN0120,2026-05-20T04:26:24,55,Katie Lane,East Katherineville,Wallis and Futuna,middle,Clothing,904.64,3,Cash,Success
+TXN0121,2026-02-13T11:50:39,275,Emily Lee,Port Williamfort,Equatorial Guinea,movie,Footwear,1929.62,2,Cash,Success
+TXN0122,2026-05-01T09:14:20,238,Alexis James,Rossville,Guinea,herself,Footwear,1706.44,1,Credit Card,Success
+TXN0123,2026-06-01T08:08:19,424,Jessica Abbott,Jeromeland,Pakistan,quickly,Accessories,90.26,3,Credit Card,Success
+TXN0124,2026-01-04T14:26:22,365,Alexis Brandt,Brandonbury,Christmas Island,other,Clothing,1937.12,4,UPI,Success
+TXN0125,2026-04-24T19:44:46,134,Christopher Neal,North Caitlynborough,Tonga,sister,Clothing,71.85,4,Cash,Success
+TXN0126,2026-03-12T12:46:17,49,Jason Moore,East Sharon,Canada,site,Home,212.8,2,UPI,Success
+TXN0127,2026-04-13T23:40:09,32,Tim Buchanan,South Jamesfurt,Niue,hour,Clothing,270.12,4,Debit Card,Success
+TXN0128,2026-01-19T01:24:22,299,Alyssa Johnson,South Austinberg,United States Minor Outlying Islands,involve,Accessories,525.05,1,UPI,Success
+TXN0129,2026-03-28T11:42:41,102,Pamela Sharp,East Craig,Guernsey,watch,Home,1620.5,1,Debit Card,Success
+TXN0130,2026-07-28T10:39:36,22,William Rodriguez,Marshallchester,Togo,water,Home,110.77,5,Cash,Failed
+TXN0131,2026-05-22T23:28:40,255,Scott Pacheco,West Thomasview,Brunei Darussalam,future,Electronics,771.63,4,Credit Card,Success
+TXN0132,2026-03-27T04:07:40,110,Mary Davis,Goodmanshire,Congo,car,Clothing,557.21,4,Credit Card,Success
+TXN0133,2026-02-10T20:47:52,315,Renee Thomas,Lake Codyfurt,Finland,very,Accessories,1237.78,3,Cash,Failed
+TXN0134,2026-07-21T21:58:37,452,David Blair,Markmouth,Paraguay,performance,Accessories,963.27,1,Debit Card,Failed
+TXN0135,2026-01-14T07:00:10,71,Victoria Adams,West Robert,Panama,check,Home,406.92,5,Credit Card,Success
+TXN0136,2026-04-03T08:43:48,196,Rebecca Welch,East Alexis,North Macedonia,along,Footwear,964.57,4,Debit Card,Success
+TXN0137,2026-06-07T12:59:45,199,Frank Armstrong,Mathewsborough,Niue,true,Footwear,367.83,3,Credit Card,Success
+TXN0138,2026-07-19T19:24:10,459,Daniel Howell,Wilsonview,Palau,special,Footwear,126.6,4,Debit Card,Success
+TXN0139,2026-06-27T05:10:24,499,Gabrielle Stafford,Matthewfort,Sierra Leone,often,Clothing,209.27,2,Debit Card,Success
+TXN0140,2026-01-10T20:52:31,392,Mary Peterson,Bryanstad,Japan,quality,Clothing,1155.63,4,Debit Card,Success
+TXN0141,2026-04-25T20:14:56,91,Beth Perez,Greerville,Mexico,seem,Clothing,1189.11,3,UPI,Success
+TXN0142,2026-07-18T09:58:34,486,Gregory Chavez,Port Teresaburgh,Indonesia,ten,Accessories,1131.58,5,Credit Card,Failed
+TXN0143,2026-02-28T22:36:36,278,Ryan Walker,East Jessicastad,Malta,plant,Footwear,359.36,1,UPI,Success
+TXN0144,2026-03-03T15:39:19,120,Kerry Williams,Amberhaven,Chad,house,Accessories,445.43,5,Cash,Success
+TXN0145,2026-06-14T16:06:47,170,Christopher Walters,Port Sarah,Saint Barthelemy,civil,Accessories,410.91,2,Debit Card,Success
+TXN0146,2026-07-05T01:43:44,471,Diana Haley,Phillipshaven,Italy,wall,Footwear,128.52,2,Credit Card,Success
+TXN0147,2026-03-23T01:44:08,434,Chad Hurley,North Johnside,Paraguay,forget,Accessories,1722.73,1,Debit Card,Failed
+TXN0148,2026-03-04T05:39:56,301,Lisa Chung,Port Robertberg,Liberia,test,Electronics,679.76,3,Credit Card,Success
+TXN0149,2026-06-01T20:22:51,375,Renee Tapia,South Kristie,Oman,kind,Home,1585.77,4,Debit Card,Success
+TXN0150,2026-02-28T23:18:33,363,Danielle Bell,West Donald,Iran,candidate,Accessories,1390.19,5,Debit Card,Success
+TXN0151,2026-07-23T14:16:47,341,Charles Hill,Alexville,Mali,foreign,Accessories,1630.76,4,Debit Card,Success
+TXN0152,2026-06-26T11:00:41,66,Mark Ruiz,Evansville,Mauritius,situation,Clothing,1460.37,5,Cash,Success
+TXN0153,2026-04-10T04:59:19,94,Spencer Webster,Nancyton,Hong Kong,this,Accessories,643.25,5,Credit Card,Success
+TXN0154,2026-02-04T09:33:35,480,John Richards,Blakebury,Mali,board,Home,289.88,1,Credit Card,Success
+TXN0155,2026-02-10T20:26:33,164,Miss Linda Cox DVM,Copelandchester,Italy,art,Clothing,1276.01,1,Debit Card,Failed
+TXN0156,2026-04-08T13:48:39,6,Diana Ramsey,Rebeccahaven,Greenland,kind,Footwear,427.27,1,Debit Card,Success
+TXN0157,2026-04-14T05:00:30,403,Mrs. Ashley Shaffer,New Troy,Nauru,leader,Electronics,1443.62,1,Cash,Failed
+TXN0158,2026-02-11T20:44:49,376,Richard Erickson,Obrienfurt,Armenia,play,Home,1938.51,4,Cash,Failed
+TXN0159,2026-06-13T19:44:03,180,Rebecca Finley,North Tammybury,Guyana,partner,Accessories,756.94,4,Credit Card,Success
+TXN0160,2026-01-15T11:26:22,232,Michelle Williams,Phelpsshire,Tonga,necessary,Electronics,1600.4,1,Debit Card,Success
+TXN0161,2026-03-12T04:35:50,164,Robin Fuller,Caldwelltown,Cuba,our,Footwear,1903.81,1,Debit Card,Success
+TXN0162,2026-04-09T10:55:25,455,Tracy Garcia,Phammouth,Thailand,vote,Home,330.2,1,UPI,Success
+TXN0163,2026-06-27T22:46:34,305,Michael Gomez,West Sean,Australia,garden,Accessories,1787.52,1,Cash,Success
+TXN0164,2026-05-06T00:08:59,311,Madison Mack,East Angela,Tonga,officer,Home,322.64,1,Debit Card,Success
+TXN0165,2026-05-17T15:03:26,499,Nicole Norman,Port Vincent,Benin,goal,Clothing,824.47,5,Debit Card,Success
+TXN0166,2026-02-05T02:53:30,153,Natalie Huff,West Maria,Bolivia,who,Clothing,200.87,4,Cash,Success
+TXN0167,2026-07-08T12:38:04,28,Emily Crawford,Port Patrick,Estonia,total,Footwear,17.59,1,Debit Card,Failed
+TXN0168,2026-05-01T14:19:36,103,Robert Huang,East Marcus,Bouvet Island (Bouvetoya),customer,Electronics,61.21,2,Debit Card,Success
+TXN0169,2026-02-06T06:12:45,243,Melody Castro,South Christine,Belarus,decide,Electronics,623.62,4,Cash,Failed
+TXN0170,2026-07-26T22:18:52,459,Kyle Mcdowell,Phelpsberg,Saint Barthelemy,grow,Footwear,191.36,5,Cash,Success
+TXN0171,2026-06-21T20:44:05,190,Casey Cruz,Christinaland,Gibraltar,down,Home,745.11,4,UPI,Success
+TXN0172,2026-03-27T00:59:47,226,Danielle Moore,Anthonybury,Syrian Arab Republic,run,Home,534.17,3,UPI,Success
+TXN0173,2026-07-07T16:26:00,386,Darius Wong,East Alexander,Ecuador,against,Electronics,180.56,3,Cash,Success
+TXN0174,2026-06-05T04:41:55,284,Jennifer Arnold,South Jacob,Maldives,partner,Electronics,1683.19,5,Cash,Failed
+TXN0175,2026-04-13T08:31:56,294,Stacy Werner,Jasminestad,Spain,suddenly,Clothing,957.76,1,Cash,Success
+TXN0176,2026-02-22T05:33:49,258,Jacob Schaefer,West Amber,Belarus,room,Accessories,1801.91,5,Credit Card,Success
+TXN0177,2026-07-04T18:11:48,487,Ronald Park,North Tina,Slovenia,movement,Home,354.03,2,Credit Card,Success
+TXN0178,2026-03-28T23:29:38,65,Ashley Mckenzie,Lake Michael,Reunion,quite,Electronics,852.52,4,Credit Card,Success
+TXN0179,2026-01-09T14:07:42,428,Kenneth Brown,Crawfordchester,Bahrain,Congress,Accessories,523.19,1,UPI,Failed
+TXN0180,2026-05-18T15:21:42,285,Kristin Brown,Thomasberg,Bahrain,rest,Home,1108.59,3,Cash,Success
+TXN0181,2026-02-21T18:58:31,403,Nathan Hudson,Lake Carlachester,Romania,south,Accessories,1179.28,4,UPI,Failed
+TXN0182,2026-07-17T06:28:59,77,Mrs. Jodi Ryan,Markshire,South Georgia and the South Sandwich Islands,type,Clothing,1137.52,5,UPI,Success
+TXN0183,2026-05-20T04:03:34,289,Brianna Ryan,Michelleton,Rwanda,somebody,Electronics,1573.63,5,Debit Card,Failed
+TXN0184,2026-04-07T14:58:46,136,Patricia Jones,New Robertburgh,Saint Martin,day,Home,1313.03,5,Cash,Success
+TXN0185,2026-02-16T09:49:17,89,Patricia Mayo,North Debra,Lithuania,shoulder,Footwear,811.92,5,Cash,Success
+TXN0186,2026-02-23T19:00:07,203,Brandon Powell,Ballardfurt,Qatar,matter,Footwear,1384.12,1,Cash,Success
+TXN0187,2026-02-05T05:42:24,460,Catherine Collins,Lake Russell,El Salvador,money,Footwear,50.26,3,Debit Card,Success
+TXN0188,2026-01-08T22:08:55,432,James Perez,West Shannonville,Malta,even,Home,1717.89,1,Credit Card,Success
+TXN0189,2026-01-02T19:26:38,154,Amy Hawkins,Codytown,Marshall Islands,actually,Home,1550.32,3,Debit Card,Failed
+TXN0190,2026-07-13T11:34:23,310,Eric Marsh,Micheleburgh,Comoros,provide,Electronics,383.99,2,Cash,Failed
+TXN0191,2026-06-21T03:35:57,389,Daniel Reed,New Neil,Christmas Island,vote,Accessories,1735.71,1,Credit Card,Success
+TXN0192,2026-01-16T01:24:08,160,Sheryl Thompson,Port Lori,Antarctica (the territory South of 60 deg S),prevent,Accessories,812.74,5,UPI,Success
+TXN0193,2026-03-12T01:36:21,99,Stacy Leon,Port Sarahport,Botswana,happy,Clothing,1675.58,2,UPI,Failed
+TXN0194,2026-05-12T00:45:54,26,Carol Garcia,New Eric,New Zealand,wife,Footwear,1412.22,3,Debit Card,Failed
+TXN0195,2026-01-26T10:09:53,259,Tanya Kelley,Bowersville,Paraguay,once,Home,1274.47,1,UPI,Success
+TXN0196,2026-01-23T18:25:01,191,Jacob Allen,Lopezfurt,Armenia,help,Home,1192.15,2,Cash,Success
+TXN0197,2026-07-26T13:54:24,177,Tammy Cochran,Port Aprilmouth,United States Minor Outlying Islands,new,Clothing,1676.93,3,UPI,Success
+TXN0198,2026-04-24T18:34:37,15,Nicole Day,Lukemouth,Serbia,decade,Home,108.81,5,Credit Card,Success
+TXN0199,2026-07-08T00:10:51,332,Jessica Graham,South Andrewville,Gibraltar,option,Clothing,1358.61,3,Cash,Success
+TXN0200,2026-01-17T04:02:36,443,Elizabeth Gay,Kelliton,Marshall Islands,theory,Electronics,953.45,2,Credit Card,Success

@@ -1,0 +1,11 @@
+
+source_system=customer_shopping_system
+environment=development
+database=customer_database.db
+batch_size=100
+retry_count=3
+minimum_age=18
+maximum_age=100
+minimum_rating=1
+maximum_rating=5
+allow_null_customer_id=false

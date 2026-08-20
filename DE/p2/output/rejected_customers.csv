@@ -1,0 +1,12 @@
+Customer ID,Name,Age,Gender,Email,Phone,City,Purchase Amount (USD),Review Rating,Category,Signup Date,Parsed Signup Date,Rejection Reason,Is Valid
+6,Troy Liu,66,Male,,+1-948-293-2528x8095,West Natashaport,1399.3,2.4,Electronics,2024-08-03,2024-08-03,Missing Email,False
+11,,60,Male,smoore@example.org,4982050097,Port Jacobland,1548.41,4.9,Electronics,2026-06-11,2026-06-11,Missing Name,False
+21,Shannon Mcclure,26,Female,zrobinson@example.net,870.983.1727x88957,Lake Michelle,190.91,1.2,,2025-06-27,2025-06-27,Missing Category,False
+26,Travis Marshall,45,Male,invalid-email,001-512-341-9049x6631,Melissaville,912.91,4.8,Footwear,2025-12-24,2025-12-24,Invalid Email Format,False
+31,Katherine Salas,33,Male,abc@,2474116719,Port Anna,489.33,3.3,Clothing,2024-11-11,2024-11-11,Invalid Email Format,False
+36,Jennifer Hodges,46,Female,gibsonleonard@example.com,768-908-7603,Wolfborough,250.8,1.9,Footwear,wrong-date,,Invalid Signup Date,False
+41,Paige Padilla,150,Male,wallaceheather@example.org,8504455623,East Christian,202.89,2.7,Accessories,2025-03-14,2025-03-14,Invalid Age,False
+46,Connie Brown,-5,Male,tblankenship@example.net,(712)800-4711x38267,South Diana,110.67,5.0,Clothing,2025-08-27,2025-08-27,Invalid Age,False
+51,Patricia Le,60,Female,russellbeasley@example.com,376-361-5654x52711,Davisstad,-500.0,2.2,Clothing,2024-02-16,2024-02-16,Invalid Purchase Amount,False
+56,James Padilla,44,Female,charles06@example.org,715.496.9664x160,Collierstad,1870.07,7.0,Footwear,2023-12-12,2023-12-12,Invalid Review Rating,False
+1,Allison Hill,58,Male,donaldgarcia@example.net,+1-219-560-0133,Robinsonshire,59.77,2.1,Electronics,2024-10-03,2024-10-03,Duplicate Customer ID,False
