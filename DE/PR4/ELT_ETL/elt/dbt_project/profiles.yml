@@ -1,0 +1,7 @@
+retail_elt_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: '../../elt_warehouse.duckdb'
+      threads: 4

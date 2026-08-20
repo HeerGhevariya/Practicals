@@ -1,0 +1,70 @@
+{
+  "dataset_records": 200000,
+  "raw_csv_size_mb": 32.8,
+  "data_parity_matched": true,
+  "etl_metrics": {
+    "architecture": "ETL",
+    "extract_time_sec": 1.4723,
+    "transform_time_sec": 15.3234,
+    "load_time_sec": 1.0577,
+    "total_time_sec": 17.8553,
+    "raw_rows_extracted": 200000,
+    "clean_rows_loaded": 194052,
+    "peak_memory_mb": 158.49,
+    "cpu_user_time_sec": 16.3438,
+    "db_size_mb": 5.01
+  },
+  "elt_metrics": {
+    "architecture": "ELT",
+    "extract_load_time_sec": 2.4741,
+    "transform_time_sec": 1.3598,
+    "total_time_sec": 3.9797,
+    "raw_rows_loaded": 200000,
+    "clean_rows_transformed": 194052,
+    "peak_memory_mb": 0.0,
+    "cpu_user_time_sec": 6.6094,
+    "db_size_mb": 10.01
+  },
+  "lineage": {
+    "ETL": {
+      "source": [
+        "raw_retail_sales.csv"
+      ],
+      "transformations": [
+        "Pandas string trim & casing",
+        "Pandas currency string replace ($)",
+        "Pandas date parsing & invalid row drop",
+        "Pandas net_amount derivation",
+        "Pandas drop_duplicates for dimensions"
+      ],
+      "targets": [
+        "dim_customers",
+        "dim_products",
+        "dim_stores",
+        "fact_sales"
+      ]
+    },
+    "ELT": {
+      "source": [
+        "raw_retail_sales.csv"
+      ],
+      "ingestion": [
+        "DuckDB read_csv_auto -> stg_raw_sales"
+      ],
+      "transformations": [
+        "DuckDB View stg_cleaned_sales (SQL INITCAP, LOWER, TRY_CAST)",
+        "DuckDB SQL set-based DISTINCT for dimensions",
+        "DuckDB SQL GROUP BY aggregate mart_daily_sales_summary"
+      ],
+      "targets": [
+        "stg_raw_sales",
+        "stg_cleaned_sales",
+        "dim_customers",
+        "dim_products",
+        "dim_stores",
+        "fact_sales",
+        "mart_daily_sales_summary"
+      ]
+    }
+  }
+}
