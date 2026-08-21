@@ -1,0 +1,1353 @@
+Microsoft Windows [Version 10.0.26200.8875]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\CHARUSAT>docker --version
+Docker version 29.5.3, build d1c06ef
+
+C:\Users\CHARUSAT>docker info
+Client:
+ Version:    29.5.3
+ Context:    desktop-linux
+ Debug Mode: false
+ Plugins:
+  agent: Docker AI Agent Runner (Docker Inc.)
+    Version:  v1.73.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-agent.exe
+  ai: Docker AI Agent - Ask Gordon (Docker Inc.)
+    Version:  v1.25.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-ai.exe
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.34.1-desktop.1
+    Path:     C:\Program Files\Docker\cli-plugins\docker-buildx.exe
+  compose: Docker Compose (Docker Inc.)
+    Version:  v5.1.4
+    Path:     C:\Program Files\Docker\cli-plugins\docker-compose.exe
+  debug: Get a shell into any image or container (Docker Inc.)
+    Version:  0.0.47
+    Path:     C:\Program Files\Docker\cli-plugins\docker-debug.exe
+  desktop: Docker Desktop commands (Docker Inc.)
+    Version:  v0.3.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-desktop.exe
+  dhi: CLI for managing Docker Hardened Images (Docker Inc.)
+    Version:  v0.0.4
+    Path:     C:\Program Files\Docker\cli-plugins\docker-dhi.exe
+  extension: Manages Docker extensions (Docker Inc.)
+    Version:  v0.2.31
+    Path:     C:\Program Files\Docker\cli-plugins\docker-extension.exe
+  init: Creates Docker-related starter files for your project (Docker Inc.)
+    Version:  v1.4.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-init.exe
+  mcp: Docker MCP Plugin (Docker Inc.)
+    Version:  v0.42.2
+    Path:     C:\Program Files\Docker\cli-plugins\docker-mcp.exe
+  model: Docker Model Runner (Docker Inc.)
+    Version:  v1.2.1
+    Path:     C:\Program Files\Docker\cli-plugins\docker-model.exe
+  offload: Docker Offload (Docker Inc.)
+    Version:  v0.6.3
+    Path:     C:\Program Files\Docker\cli-plugins\docker-offload.exe
+  pass: Docker Pass Secrets Manager Plugin (beta) (Docker Inc.)
+    Version:  v0.1.4
+    Path:     C:\Program Files\Docker\cli-plugins\docker-pass.exe
+  sandbox: Docker Sandbox (Docker Inc.)
+    Version:  v0.12.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-sandbox.exe
+  scout: Docker Scout (Docker Inc.)
+    Version:  v1.21.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-scout.exe
+
+Server:
+ Containers: 0
+  Running: 0
+  Paused: 0
+  Stopped: 0
+ Images: 1
+ Server Version: 29.5.3
+ Storage Driver: overlayfs
+  driver-type: io.containerd.snapshotter.v1
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Discovered Devices:
+  cdi: docker.com/gpu=webgpu
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 nvidia runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 193637f7ee8ae5f5aa5248f49e7baa3e6164966e
+ runc version: v1.3.5-0-g488fc13e
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.18.33.1-microsoft-standard-WSL2
+ Operating System: Docker Desktop
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 8
+ Total Memory: 7.625GiB
+ Name: docker-desktop
+ ID: 833a321c-7b44-4d65-b00d-0b0f3a5d8ac3
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ HTTP Proxy: http.docker.internal:3128
+ HTTPS Proxy: http.docker.internal:3128
+ No Proxy: hubproxy.docker.internal
+ Labels:
+  com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+ Experimental: false
+ Insecure Registries:
+  hubproxy.docker.internal:5555
+  ::1/128
+  127.0.0.0/8
+ Live Restore Enabled: false
+ Firewall Backend: iptables
+
+
+C:\Users\CHARUSAT>docker run -d --name minio -p 9000:9000 -p 9001:9001 -e MINIO_ROOT_USER=admin -e MINIO_ROOT_PASSWORD=Minio@12345 minio/minio server /data --console-address ":9001"
+Unable to find image 'minio/minio:latest' locally
+latest: Pulling from minio/minio
+f9c0805c25ee: Pull complete
+81260b173076: Pull complete
+34013573f278: Pull complete
+f94d28849fa3: Pull complete
+1008deaf6ec4: Pull complete
+71e9fc939447: Pull complete
+c1bc68842c41: Pull complete
+b83ce1c86227: Pull complete
+0288b5a0d7e7: Pull complete
+Digest: sha256:14cea493d9a34af32f524e538b8346cf79f3321eff8e708c1e2960462bd8936e
+Status: Downloaded newer image for minio/minio:latest
+3bc728051f7f0864aa52650775c1c1527360c43b004fd8a5938e9f8d2271c5d1
+
+C:\Users\CHARUSAT>docker ps
+CONTAINER ID   IMAGE         COMMAND                  CREATED          STATUS          PORTS                                 NAMES
+3bc728051f7f   minio/minio   "/usr/bin/docker-ent…"   11 seconds ago   Up 10 seconds   0.0.0.0:9000-9001->9000-9001/tcp, [::]:9000-9001->9000-9001/tcp   minio
+
+C:\Users\CHARUSAT>mkdir minio_partition_lab
+
+C:\Users\CHARUSAT>cd minio_partition_lab
+
+C:\Users\CHARUSAT\minio_partition_lab>mkdir data
+
+C:\Users\CHARUSAT\minio_partition_lab>mkdir scripts
+
+C:\Users\CHARUSAT\minio_partition_lab>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 9A0A-3209
+
+ Directory of C:\Users\CHARUSAT\minio_partition_lab
+
+08/10/2026  03:52 PM    <DIR>          .
+08/10/2026  03:51 PM    <DIR>          ..
+08/10/2026  03:52 PM    <DIR>          data
+08/10/2026  03:52 PM    <DIR>          scripts
+               0 File(s)              0 bytes
+               4 Dir(s)  87,497,883,648 bytes free
+
+C:\Users\CHARUSAT\minio_partition_lab>python --version
+Python 3.14.6
+
+C:\Users\CHARUSAT\minio_partition_lab>pip --version
+pip 26.1.2 from C:\Users\CHARUSAT\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip (python 3.14)
+
+C:\Users\CHARUSAT\minio_partition_lab>pip install boto3 pandas
+Collecting boto3
+  Downloading boto3-1.43.67-py3-none-any.whl.metadata (6.6 kB)
+Requirement already satisfied: pandas in C:\Users\CHARUSAT\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages (3.0.5)
+Collecting botocore<1.44.0,>=1.43.67 (from boto3)
+  Downloading botocore-1.43.67-py3-none-any.whl.metadata (5.6 kB)
+Collecting jmespath<2.0.0,>=0.7.1 (from boto3)
+  Downloading jmespath-1.1.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting s3transfer<0.20.0,>=0.19.0 (from boto3)
+  Downloading s3transfer-0.19.2-py3-none-any.whl.metadata (1.7 kB)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in C:\Users\CHARUSAT\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages (from botocore<1.44.0,>=1.43.67->boto3) (2.9.0.post0)
+Collecting urllib3!=2.2.0,<3,>=1.25.4 (from botocore<1.44.0,>=1.43.67->boto3)
+  Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+Requirement already satisfied: six>=1.5 in C:\Users\CHARUSAT\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages (from python-dateutil<3.0.0,>=2.1->botocore<1.44.0,>=1.43.67->boto3) (1.17.0)
+Requirement already satisfied: numpy>=2.3.3 in C:\Users\CHARUSAT\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages (from pandas) (2.5.1)
+Requirement already satisfied: tzdata in C:\Users\CHARUSAT\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages (from pandas) (2026.3)
+Downloading boto3-1.43.67-py3-none-any.whl (140 kB)
+Downloading botocore-1.43.67-py3-none-any.whl (15.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.6/15.6 MB 3.7 MB/s  0:00:04
+Downloading jmespath-1.1.0-py3-none-any.whl (20 kB)
+Downloading s3transfer-0.19.2-py3-none-any.whl (90 kB)
+Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+Installing collected packages: urllib3, jmespath, botocore, s3transfer, boto3
+Successfully installed boto3-1.43.67 botocore-1.43.67 jmespath-1.1.0 s3transfer-0.19.2 urllib3-2.7.0
+
+[notice] A new release of pip is available: 26.1.2 -> 26.2.1
+[notice] To update, run: C:\Users\CHARUSAT\AppData\Local\Python\pythoncore-3.14-64\python.exe -m pip install --upgrade pip
+
+C:\Users\CHARUSAT\minio_partition_lab>python -c "import boto3; import pandas; print('Boto3 and Pandas OK')"
+Boto3 and Pandas OK
+
+C:\Users\CHARUSAT\minio_partition_lab>notepad test_minio.py
+
+C:\Users\CHARUSAT\minio_partition_lab>python test_minio.py
+Connected to MinIO successfully!
+Buckets:
+- metrics
+
+C:\Users\CHARUSAT\minio_partition_lab>python test_minio.py
+Connected to MinIO successfully!
+Buckets:
+- metrics
+
+C:\Users\CHARUSAT\minio_partition_lab>cd scripts
+
+C:\Users\CHARUSAT\minio_partition_lab\scripts>notepad generate_data.py
+
+C:\Users\CHARUSAT\minio_partition_lab\scripts>python generate_data.py
+Dataset generated successfully!
+Records: 20000
+
+            timestamp  year  month       region application         metric   value
+0 2025-04-18 01:06:00  2025      4    Karnataka   MobileApp  request_count  152.79
+1 2023-11-21 04:45:00  2023     11    Rajasthan   Analytics   memory_usage  242.73
+2 2023-06-15 22:12:00  2023      6        Delhi      WebApp   memory_usage  806.62
+3 2022-10-12 11:34:00  2022     10      Gujarat   Analytics  request_count  982.90
+4 2024-12-19 10:16:00  2024     12  Maharashtra   Analytics    error_count   19.79
+
+C:\Users\CHARUSAT\minio_partition_lab\scripts>cd ..
+
+C:\Users\CHARUSAT\minio_partition_lab>dir data
+ Volume in drive C has no label.
+ Volume Serial Number is 9A0A-3209
+
+ Directory of C:\Users\CHARUSAT\minio_partition_lab\data
+
+08/10/2026  04:01 PM    <DIR>          .
+08/10/2026  03:55 PM    <DIR>          ..
+08/10/2026  04:01 PM         1,293,022 metrics.csv
+               1 File(s)      1,293,022 bytes
+               2 Dir(s)  87,364,337,664 bytes free
+
+C:\Users\CHARUSAT\minio_partition_lab>python -c "import pandas as pd; df=pd.read_csv('data/metrics.csv'); print(df.shape); print(df.head())"
+(20000, 7)
+             timestamp  year  month       region application         metric   value
+0  2025-04-18 01:06:00  2025      4    Karnataka   MobileApp  request_count  152.79
+1  2023-11-21 04:45:00  2023     11    Rajasthan   Analytics   memory_usage  242.73
+2  2023-06-15 22:12:00  2023      6        Delhi      WebApp   memory_usage  806.62
+3  2022-10-12 11:34:00  2022     10      Gujarat   Analytics  request_count  982.90
+4  2024-12-19 10:16:00  2024     12  Maharashtra   Analytics    error_count   19.79
+
+C:\Users\CHARUSAT\minio_partition_lab>cd scripts
+
+C:\Users\CHARUSAT\minio_partition_lab\scripts>notepad create_partitions.py
+
+C:\Users\CHARUSAT\minio_partition_lab\scripts>python create_partitions.py
+Total records: 20000
+Partitioning completed successfully!
+
+C:\Users\CHARUSAT\minio_partition_lab\scripts>cd ..
+
+C:\Users\CHARUSAT\minio_partition_lab>tree data /F
+Folder PATH listing
+Volume serial number is 000001EE 9A0A:3209
+C:\USERS\CHARUSAT\MINIO_PARTITION_LAB\DATA
+│   metrics.csv
+│
+└───partitions
+    ├───year=2022
+    │   ├───month=1
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=10
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=11
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=12
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=2
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=3
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=4
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=5
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=6
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=7
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=8
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   └───month=9
+    │       ├───region=Delhi
+    │       │       data.csv
+    │       │
+    │       ├───region=Gujarat
+    │       │       data.csv
+    │       │
+    │       ├───region=Karnataka
+    │       │       data.csv
+    │       │
+    │       ├───region=Maharashtra
+    │       │       data.csv
+    │       │
+    │       └───region=Rajasthan
+    │               data.csv
+    │
+    ├───year=2023
+    │   ├───month=1
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=10
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=11
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=12
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=2
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=3
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=4
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=5
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=6
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=7
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=8
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   └───month=9
+    │       ├───region=Delhi
+    │       │       data.csv
+    │       │
+    │       ├───region=Gujarat
+    │       │       data.csv
+    │       │
+    │       ├───region=Karnataka
+    │       │       data.csv
+    │       │
+    │       ├───region=Maharashtra
+    │       │       data.csv
+    │       │
+    │       └───region=Rajasthan
+    │               data.csv
+    │
+    ├───year=2024
+    │   ├───month=1
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=10
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=11
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=12
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=2
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=3
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=4
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=5
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=6
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=7
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   ├───month=8
+    │   │   ├───region=Delhi
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Gujarat
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Karnataka
+    │   │   │       data.csv
+    │   │   │
+    │   │   ├───region=Maharashtra
+    │   │   │       data.csv
+    │   │   │
+    │   │   └───region=Rajasthan
+    │   │           data.csv
+    │   │
+    │   └───month=9
+    │       ├───region=Delhi
+    │       │       data.csv
+    │       │
+    │       ├───region=Gujarat
+    │       │       data.csv
+    │       │
+    │       ├───region=Karnataka
+    │       │       data.csv
+    │       │
+    │       ├───region=Maharashtra
+    │       │       data.csv
+    │       │
+    │       └───region=Rajasthan
+    │               data.csv
+    │
+    └───year=2025
+        ├───month=1
+        │   ├───region=Delhi
+        │   │       data.csv
+        │   │
+        │   ├───region=Gujarat
+        │   │       data.csv
+        │   │
+        │   ├───region=Karnataka
+        │   │       data.csv
+        │   │
+        │   ├───region=Maharashtra
+        │   │       data.csv
+        │   │
+        │   └───region=Rajasthan
+        │           data.csv
+        │
+        ├───month=10
+        │   ├───region=Delhi
+        │   │       data.csv
+        │   │
+        │   ├───region=Gujarat
+        │   │       data.csv
+        │   │
+        │   ├───region=Karnataka
+        │   │       data.csv
+        │   │
+        │   ├───region=Maharashtra
+        │   │       data.csv
+        │   │
+        │   └───region=Rajasthan
+        │           data.csv
+        │
+        ├───month=11
+        │   ├───region=Delhi
+        │   │       data.csv
+        │   │
+        │   ├───region=Gujarat
+        │   │       data.csv
+        │   │
+        │   ├───region=Karnataka
+        │   │       data.csv
+        │   │
+        │   ├───region=Maharashtra
+        │   │       data.csv
+        │   │
+        │   └───region=Rajasthan
+        │           data.csv
+        │
+        ├───month=12
+        │   ├───region=Delhi
+        │   │       data.csv
+        │   │
+        │   ├───region=Gujarat
+        │   │       data.csv
+        │   │
+        │   ├───region=Karnataka
+        │   │       data.csv
+        │   │
+        │   ├───region=Maharashtra
+        │   │       data.csv
+        │   │
+        │   └───region=Rajasthan
+        │           data.csv
+        │
+        ├───month=2
+        │   ├───region=Delhi
+        │   │       data.csv
+        │   │
+        │   ├───region=Gujarat
+        │   │       data.csv
+        │   │
+        │   ├───region=Karnataka
+        │   │       data.csv
+        │   │
+        │   ├───region=Maharashtra
+        │   │       data.csv
+        │   │
+        │   └───region=Rajasthan
+        │           data.csv
+        │
+        ├───month=3
+        │   ├───region=Delhi
+        │   │       data.csv
+        │   │
+        │   ├───region=Gujarat
+        │   │       data.csv
+        │   │
+        │   ├───region=Karnataka
+        │   │       data.csv
+        │   │
+        │   ├───region=Maharashtra
+        │   │       data.csv
+        │   │
+        │   └───region=Rajasthan
+        │           data.csv
+        │
+        ├───month=4
+        │   ├───region=Delhi
+        │   │       data.csv
+        │   │
+        │   ├───region=Gujarat
+        │   │       data.csv
+        │   │
+        │   ├───region=Karnataka
+        │   │       data.csv
+        │   │
+        │   ├───region=Maharashtra
+        │   │       data.csv
+        │   │
+        │   └───region=Rajasthan
+        │           data.csv
+        │
+        ├───month=5
+        │   ├───region=Delhi
+        │   │       data.csv
+        │   │
+        │   ├───region=Gujarat
+        │   │       data.csv
+        │   │
+        │   ├───region=Karnataka
+        │   │       data.csv
+        │   │
+        │   ├───region=Maharashtra
+        │   │       data.csv
+        │   │
+        │   └───region=Rajasthan
+        │           data.csv
+        │
+        ├───month=6
+        │   ├───region=Delhi
+        │   │       data.csv
+        │   │
+        │   ├───region=Gujarat
+        │   │       data.csv
+        │   │
+        │   ├───region=Karnataka
+        │   │       data.csv
+        │   │
+        │   ├───region=Maharashtra
+        │   │       data.csv
+        │   │
+        │   └───region=Rajasthan
+        │           data.csv
+        │
+        ├───month=7
+        │   ├───region=Delhi
+        │   │       data.csv
+        │   │
+        │   ├───region=Gujarat
+        │   │       data.csv
+        │   │
+        │   ├───region=Karnataka
+        │   │       data.csv
+        │   │
+        │   ├───region=Maharashtra
+        │   │       data.csv
+        │   │
+        │   └───region=Rajasthan
+        │           data.csv
+        │
+        ├───month=8
+        │   ├───region=Delhi
+        │   │       data.csv
+        │   │
+        │   ├───region=Gujarat
+        │   │       data.csv
+        │   │
+        │   ├───region=Karnataka
+        │   │       data.csv
+        │   │
+        │   ├───region=Maharashtra
+        │   │       data.csv
+        │   │
+        │   └───region=Rajasthan
+        │           data.csv
+        │
+        └───month=9
+            ├───region=Delhi
+            │       data.csv
+            │
+            ├───region=Gujarat
+            │       data.csv
+            │
+            ├───region=Karnataka
+            │       data.csv
+            │
+            ├───region=Maharashtra
+            │       data.csv
+            │
+            └───region=Rajasthan
+                    data.csv
+
+
+C:\Users\CHARUSAT\minio_partition_lab>cd data
+
+C:\Users\CHARUSAT\minio_partition_lab\data>cd partitions
+
+C:\Users\CHARUSAT\minio_partition_lab\data\partitions>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 9A0A-3209
+
+ Directory of C:\Users\CHARUSAT\minio_partition_lab\data\partitions
+
+08/10/2026  04:04 PM    <DIR>          .
+08/10/2026  04:04 PM    <DIR>          ..
+08/10/2026  04:04 PM    <DIR>          year=2022
+08/10/2026  04:04 PM    <DIR>          year=2023
+08/10/2026  04:04 PM    <DIR>          year=2024
+08/10/2026  04:04 PM    <DIR>          year=2025
+               0 File(s)              0 bytes
+               6 Dir(s)  87,347,884,032 bytes free
+
+C:\Users\CHARUSAT\minio_partition_lab\data\partitions>cd ..
+
+C:\Users\CHARUSAT\minio_partition_lab\data>cd ..
+
+C:\Users\CHARUSAT\minio_partition_lab>cd scripts
+
+C:\Users\CHARUSAT\minio_partition_lab\scripts>notepad upload_partitions.py
+
+C:\Users\CHARUSAT\minio_partition_lab\scripts>python upload_partitions.py
+Uploading: year=2022/month=1/region=Delhi/data.csv
+Uploading: year=2022/month=1/region=Gujarat/data.csv
+Uploading: year=2022/month=1/region=Karnataka/data.csv
+Uploading: year=2022/month=1/region=Maharashtra/data.csv
+Uploading: year=2022/month=1/region=Rajasthan/data.csv
+Uploading: year=2022/month=10/region=Delhi/data.csv
+Uploading: year=2022/month=10/region=Gujarat/data.csv
+Uploading: year=2022/month=10/region=Karnataka/data.csv
+Uploading: year=2022/month=10/region=Maharashtra/data.csv
+Uploading: year=2022/month=10/region=Rajasthan/data.csv
+Uploading: year=2022/month=11/region=Delhi/data.csv
+Uploading: year=2022/month=11/region=Gujarat/data.csv
+Uploading: year=2022/month=11/region=Karnataka/data.csv
+Uploading: year=2022/month=11/region=Maharashtra/data.csv
+Uploading: year=2022/month=11/region=Rajasthan/data.csv
+Uploading: year=2022/month=12/region=Delhi/data.csv
+Uploading: year=2022/month=12/region=Gujarat/data.csv
+Uploading: year=2022/month=12/region=Karnataka/data.csv
+Uploading: year=2022/month=12/region=Maharashtra/data.csv
+Uploading: year=2022/month=12/region=Rajasthan/data.csv
+Uploading: year=2022/month=2/region=Delhi/data.csv
+Uploading: year=2022/month=2/region=Gujarat/data.csv
+Uploading: year=2022/month=2/region=Karnataka/data.csv
+Uploading: year=2022/month=2/region=Maharashtra/data.csv
+Uploading: year=2022/month=2/region=Rajasthan/data.csv
+Uploading: year=2022/month=3/region=Delhi/data.csv
+Uploading: year=2022/month=3/region=Gujarat/data.csv
+Uploading: year=2022/month=3/region=Karnataka/data.csv
+Uploading: year=2022/month=3/region=Maharashtra/data.csv
+Uploading: year=2022/month=3/region=Rajasthan/data.csv
+Uploading: year=2022/month=4/region=Delhi/data.csv
+Uploading: year=2022/month=4/region=Gujarat/data.csv
+Uploading: year=2022/month=4/region=Karnataka/data.csv
+Uploading: year=2022/month=4/region=Maharashtra/data.csv
+Uploading: year=2022/month=4/region=Rajasthan/data.csv
+Uploading: year=2022/month=5/region=Delhi/data.csv
+Uploading: year=2022/month=5/region=Gujarat/data.csv
+Uploading: year=2022/month=5/region=Karnataka/data.csv
+Uploading: year=2022/month=5/region=Maharashtra/data.csv
+Uploading: year=2022/month=5/region=Rajasthan/data.csv
+Uploading: year=2022/month=6/region=Delhi/data.csv
+Uploading: year=2022/month=6/region=Gujarat/data.csv
+Uploading: year=2022/month=6/region=Karnataka/data.csv
+Uploading: year=2022/month=6/region=Maharashtra/data.csv
+Uploading: year=2022/month=6/region=Rajasthan/data.csv
+Uploading: year=2022/month=7/region=Delhi/data.csv
+Uploading: year=2022/month=7/region=Gujarat/data.csv
+Uploading: year=2022/month=7/region=Karnataka/data.csv
+Uploading: year=2022/month=7/region=Maharashtra/data.csv
+Uploading: year=2022/month=7/region=Rajasthan/data.csv
+Uploading: year=2022/month=8/region=Delhi/data.csv
+Uploading: year=2022/month=8/region=Gujarat/data.csv
+Uploading: year=2022/month=8/region=Karnataka/data.csv
+Uploading: year=2022/month=8/region=Maharashtra/data.csv
+Uploading: year=2022/month=8/region=Rajasthan/data.csv
+Uploading: year=2022/month=9/region=Delhi/data.csv
+Uploading: year=2022/month=9/region=Gujarat/data.csv
+Uploading: year=2022/month=9/region=Karnataka/data.csv
+Uploading: year=2022/month=9/region=Maharashtra/data.csv
+Uploading: year=2022/month=9/region=Rajasthan/data.csv
+Uploading: year=2023/month=1/region=Delhi/data.csv
+Uploading: year=2023/month=1/region=Gujarat/data.csv
+Uploading: year=2023/month=1/region=Karnataka/data.csv
+Uploading: year=2023/month=1/region=Maharashtra/data.csv
+Uploading: year=2023/month=1/region=Rajasthan/data.csv
+Uploading: year=2023/month=10/region=Delhi/data.csv
+Uploading: year=2023/month=10/region=Gujarat/data.csv
+Uploading: year=2023/month=10/region=Karnataka/data.csv
+Uploading: year=2023/month=10/region=Maharashtra/data.csv
+Uploading: year=2023/month=10/region=Rajasthan/data.csv
+Uploading: year=2023/month=11/region=Delhi/data.csv
+Uploading: year=2023/month=11/region=Gujarat/data.csv
+Uploading: year=2023/month=11/region=Karnataka/data.csv
+Uploading: year=2023/month=11/region=Maharashtra/data.csv
+Uploading: year=2023/month=11/region=Rajasthan/data.csv
+Uploading: year=2023/month=12/region=Delhi/data.csv
+Uploading: year=2023/month=12/region=Gujarat/data.csv
+Uploading: year=2023/month=12/region=Karnataka/data.csv
+Uploading: year=2023/month=12/region=Maharashtra/data.csv
+Uploading: year=2023/month=12/region=Rajasthan/data.csv
+Uploading: year=2023/month=2/region=Delhi/data.csv
+Uploading: year=2023/month=2/region=Gujarat/data.csv
+Uploading: year=2023/month=2/region=Karnataka/data.csv
+Uploading: year=2023/month=2/region=Maharashtra/data.csv
+Uploading: year=2023/month=2/region=Rajasthan/data.csv
+Uploading: year=2023/month=3/region=Delhi/data.csv
+Uploading: year=2023/month=3/region=Gujarat/data.csv
+Uploading: year=2023/month=3/region=Karnataka/data.csv
+Uploading: year=2023/month=3/region=Maharashtra/data.csv
+Uploading: year=2023/month=3/region=Rajasthan/data.csv
+Uploading: year=2023/month=4/region=Delhi/data.csv
+Uploading: year=2023/month=4/region=Gujarat/data.csv
+Uploading: year=2023/month=4/region=Karnataka/data.csv
+Uploading: year=2023/month=4/region=Maharashtra/data.csv
+Uploading: year=2023/month=4/region=Rajasthan/data.csv
+Uploading: year=2023/month=5/region=Delhi/data.csv
+Uploading: year=2023/month=5/region=Gujarat/data.csv
+Uploading: year=2023/month=5/region=Karnataka/data.csv
+Uploading: year=2023/month=5/region=Maharashtra/data.csv
+Uploading: year=2023/month=5/region=Rajasthan/data.csv
+Uploading: year=2023/month=6/region=Delhi/data.csv
+Uploading: year=2023/month=6/region=Gujarat/data.csv
+Uploading: year=2023/month=6/region=Karnataka/data.csv
+Uploading: year=2023/month=6/region=Maharashtra/data.csv
+Uploading: year=2023/month=6/region=Rajasthan/data.csv
+Uploading: year=2023/month=7/region=Delhi/data.csv
+Uploading: year=2023/month=7/region=Gujarat/data.csv
+Uploading: year=2023/month=7/region=Karnataka/data.csv
+Uploading: year=2023/month=7/region=Maharashtra/data.csv
+Uploading: year=2023/month=7/region=Rajasthan/data.csv
+Uploading: year=2023/month=8/region=Delhi/data.csv
+Uploading: year=2023/month=8/region=Gujarat/data.csv
+Uploading: year=2023/month=8/region=Karnataka/data.csv
+Uploading: year=2023/month=8/region=Maharashtra/data.csv
+Uploading: year=2023/month=8/region=Rajasthan/data.csv
+Uploading: year=2023/month=9/region=Delhi/data.csv
+Uploading: year=2023/month=9/region=Gujarat/data.csv
+Uploading: year=2023/month=9/region=Karnataka/data.csv
+Uploading: year=2023/month=9/region=Maharashtra/data.csv
+Uploading: year=2023/month=9/region=Rajasthan/data.csv
+Uploading: year=2024/month=1/region=Delhi/data.csv
+Uploading: year=2024/month=1/region=Gujarat/data.csv
+Uploading: year=2024/month=1/region=Karnataka/data.csv
+Uploading: year=2024/month=1/region=Maharashtra/data.csv
+Uploading: year=2024/month=1/region=Rajasthan/data.csv
+Uploading: year=2024/month=10/region=Delhi/data.csv
+Uploading: year=2024/month=10/region=Gujarat/data.csv
+Uploading: year=2024/month=10/region=Karnataka/data.csv
+Uploading: year=2024/month=10/region=Maharashtra/data.csv
+Uploading: year=2024/month=10/region=Rajasthan/data.csv
+Uploading: year=2024/month=11/region=Delhi/data.csv
+Uploading: year=2024/month=11/region=Gujarat/data.csv
+Uploading: year=2024/month=11/region=Karnataka/data.csv
+Uploading: year=2024/month=11/region=Maharashtra/data.csv
+Uploading: year=2024/month=11/region=Rajasthan/data.csv
+Uploading: year=2024/month=12/region=Delhi/data.csv
+Uploading: year=2024/month=12/region=Gujarat/data.csv
+Uploading: year=2024/month=12/region=Karnataka/data.csv
+Uploading: year=2024/month=12/region=Maharashtra/data.csv
+Uploading: year=2024/month=12/region=Rajasthan/data.csv
+Uploading: year=2024/month=2/region=Delhi/data.csv
+Uploading: year=2024/month=2/region=Gujarat/data.csv
+Uploading: year=2024/month=2/region=Karnataka/data.csv
+Uploading: year=2024/month=2/region=Maharashtra/data.csv
+Uploading: year=2024/month=2/region=Rajasthan/data.csv
+Uploading: year=2024/month=3/region=Delhi/data.csv
+Uploading: year=2024/month=3/region=Gujarat/data.csv
+Uploading: year=2024/month=3/region=Karnataka/data.csv
+Uploading: year=2024/month=3/region=Maharashtra/data.csv
+Uploading: year=2024/month=3/region=Rajasthan/data.csv
+Uploading: year=2024/month=4/region=Delhi/data.csv
+Uploading: year=2024/month=4/region=Gujarat/data.csv
+Uploading: year=2024/month=4/region=Karnataka/data.csv
+Uploading: year=2024/month=4/region=Maharashtra/data.csv
+Uploading: year=2024/month=4/region=Rajasthan/data.csv
+Uploading: year=2024/month=5/region=Delhi/data.csv
+Uploading: year=2024/month=5/region=Gujarat/data.csv
+Uploading: year=2024/month=5/region=Karnataka/data.csv
+Uploading: year=2024/month=5/region=Maharashtra/data.csv
+Uploading: year=2024/month=5/region=Rajasthan/data.csv
+Uploading: year=2024/month=6/region=Delhi/data.csv
+Uploading: year=2024/month=6/region=Gujarat/data.csv
+Uploading: year=2024/month=6/region=Karnataka/data.csv
+Uploading: year=2024/month=6/region=Maharashtra/data.csv
+Uploading: year=2024/month=6/region=Rajasthan/data.csv
+Uploading: year=2024/month=7/region=Delhi/data.csv
+Uploading: year=2024/month=7/region=Gujarat/data.csv
+Uploading: year=2024/month=7/region=Karnataka/data.csv
+Uploading: year=2024/month=7/region=Maharashtra/data.csv
+Uploading: year=2024/month=7/region=Rajasthan/data.csv
+Uploading: year=2024/month=8/region=Delhi/data.csv
+Uploading: year=2024/month=8/region=Gujarat/data.csv
+Uploading: year=2024/month=8/region=Karnataka/data.csv
+Uploading: year=2024/month=8/region=Maharashtra/data.csv
+Uploading: year=2024/month=8/region=Rajasthan/data.csv
+Uploading: year=2024/month=9/region=Delhi/data.csv
+Uploading: year=2024/month=9/region=Gujarat/data.csv
+Uploading: year=2024/month=9/region=Karnataka/data.csv
+Uploading: year=2024/month=9/region=Maharashtra/data.csv
+Uploading: year=2024/month=9/region=Rajasthan/data.csv
+Uploading: year=2025/month=1/region=Delhi/data.csv
+Uploading: year=2025/month=1/region=Gujarat/data.csv
+Uploading: year=2025/month=1/region=Karnataka/data.csv
+Uploading: year=2025/month=1/region=Maharashtra/data.csv
+Uploading: year=2025/month=1/region=Rajasthan/data.csv
+Uploading: year=2025/month=10/region=Delhi/data.csv
+Uploading: year=2025/month=10/region=Gujarat/data.csv
+Uploading: year=2025/month=10/region=Karnataka/data.csv
+Uploading: year=2025/month=10/region=Maharashtra/data.csv
+Uploading: year=2025/month=10/region=Rajasthan/data.csv
+Uploading: year=2025/month=11/region=Delhi/data.csv
+Uploading: year=2025/month=11/region=Gujarat/data.csv
+Uploading: year=2025/month=11/region=Karnataka/data.csv
+Uploading: year=2025/month=11/region=Maharashtra/data.csv
+Uploading: year=2025/month=11/region=Rajasthan/data.csv
+Uploading: year=2025/month=12/region=Delhi/data.csv
+Uploading: year=2025/month=12/region=Gujarat/data.csv
+Uploading: year=2025/month=12/region=Karnataka/data.csv
+Uploading: year=2025/month=12/region=Maharashtra/data.csv
+Uploading: year=2025/month=12/region=Rajasthan/data.csv
+Uploading: year=2025/month=2/region=Delhi/data.csv
+Uploading: year=2025/month=2/region=Gujarat/data.csv
+Uploading: year=2025/month=2/region=Karnataka/data.csv
+Uploading: year=2025/month=2/region=Maharashtra/data.csv
+Uploading: year=2025/month=2/region=Rajasthan/data.csv
+Uploading: year=2025/month=3/region=Delhi/data.csv
+Uploading: year=2025/month=3/region=Gujarat/data.csv
+Uploading: year=2025/month=3/region=Karnataka/data.csv
+Uploading: year=2025/month=3/region=Maharashtra/data.csv
+Uploading: year=2025/month=3/region=Rajasthan/data.csv
+Uploading: year=2025/month=4/region=Delhi/data.csv
+Uploading: year=2025/month=4/region=Gujarat/data.csv
+Uploading: year=2025/month=4/region=Karnataka/data.csv
+Uploading: year=2025/month=4/region=Maharashtra/data.csv
+Uploading: year=2025/month=4/region=Rajasthan/data.csv
+Uploading: year=2025/month=5/region=Delhi/data.csv
+Uploading: year=2025/month=5/region=Gujarat/data.csv
+Uploading: year=2025/month=5/region=Karnataka/data.csv
+Uploading: year=2025/month=5/region=Maharashtra/data.csv
+Uploading: year=2025/month=5/region=Rajasthan/data.csv
+Uploading: year=2025/month=6/region=Delhi/data.csv
+Uploading: year=2025/month=6/region=Gujarat/data.csv
+Uploading: year=2025/month=6/region=Karnataka/data.csv
+Uploading: year=2025/month=6/region=Maharashtra/data.csv
+Uploading: year=2025/month=6/region=Rajasthan/data.csv
+Uploading: year=2025/month=7/region=Delhi/data.csv
+Uploading: year=2025/month=7/region=Gujarat/data.csv
+Uploading: year=2025/month=7/region=Karnataka/data.csv
+Uploading: year=2025/month=7/region=Maharashtra/data.csv
+Uploading: year=2025/month=7/region=Rajasthan/data.csv
+Uploading: year=2025/month=8/region=Delhi/data.csv
+Uploading: year=2025/month=8/region=Gujarat/data.csv
+Uploading: year=2025/month=8/region=Karnataka/data.csv
+Uploading: year=2025/month=8/region=Maharashtra/data.csv
+Uploading: year=2025/month=8/region=Rajasthan/data.csv
+Uploading: year=2025/month=9/region=Delhi/data.csv
+Uploading: year=2025/month=9/region=Gujarat/data.csv
+Uploading: year=2025/month=9/region=Karnataka/data.csv
+Uploading: year=2025/month=9/region=Maharashtra/data.csv
+Uploading: year=2025/month=9/region=Rajasthan/data.csv
+
+All partitions uploaded successfully!
+
+C:\Users\CHARUSAT\minio_partition_lab\scripts>notepad performance_test.py
+
+C:\Users\CHARUSAT\minio_partition_lab\scripts>python performance_test.py
+
+========== FULL TABLE SCAN ==========
+Records found: 1007
+Records scanned: 20000
+Time: 121.91 ms
+
+========== PARTITIONED SCAN ==========
+Records found: 82
+Records scanned: 82
+Time: 11.424 ms
+
+========== PERFORMANCE COMPARISON ==========
+Full table scan: 121.91 ms
+Partition scan: 11.424 ms
+Performance improvement: 90.63 %
+
+C:\Users\CHARUSAT\minio_partition_lab\scripts>notepad partition_query.py
+
+C:\Users\CHARUSAT\minio_partition_lab\scripts>python partition_query.py
+Partitions found: 12
+Records found: 1007
+Partitions scanned: 12
+Time: 60.0 ms
+
+C:\Users\CHARUSAT\minio_partition_lab\scripts>notepad minio_query.py
+
+C:\Users\CHARUSAT\minio_partition_lab\scripts>python minio_query.py
+Matching partitions:
+- year=2025/month=1/region=Gujarat/data.csv
+- year=2025/month=10/region=Gujarat/data.csv
+- year=2025/month=11/region=Gujarat/data.csv
+- year=2025/month=12/region=Gujarat/data.csv
+- year=2025/month=2/region=Gujarat/data.csv
+- year=2025/month=3/region=Gujarat/data.csv
+- year=2025/month=4/region=Gujarat/data.csv
+- year=2025/month=5/region=Gujarat/data.csv
+- year=2025/month=6/region=Gujarat/data.csv
+- year=2025/month=7/region=Gujarat/data.csv
+- year=2025/month=8/region=Gujarat/data.csv
+- year=2025/month=9/region=Gujarat/data.csv
+
+========== RESULT ==========
+Records found: 1007
+Partitions scanned: 12
+Time: 258.118 ms
+
+C:\Users\CHARUSAT\minio_partition_lab\scripts>
